@@ -569,7 +569,7 @@ class AllowAllIamPolicies(Filter):
             if ('Condition' not in s and
                     'Action' in s and
                     isinstance(s['Action'], six.string_types) and
-                    s['Action'] == "*" and
+                    s['Action'] == "ec2:*" and
                     'Resource' in s and
                     isinstance(s['Resource'], six.string_types) and
                     s['Resource'] == "*" and
